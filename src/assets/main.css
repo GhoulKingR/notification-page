@@ -1,0 +1,8 @@
+body, body * {
+	all: unset;
+}
+
+@font-face {
+  font-family: pjs;
+  src: url(fonts/PlusJakartaSans-VariableFont_wght.ttf);
+}
