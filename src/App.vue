@@ -10,86 +10,90 @@ import Chess from "./assets/images/image-chess.webp";
 </script>
 
 <template>
-	<header>
-		<div>
-			<h1 class="header">Notifications</h1>
-			<span class="count">3</span>
-		</div>
+	<div class="main">
+		<div class="container">
+			<header>
+				<div>
+					<h1 class="header">Notifications</h1>
+					<span class="count">3</span>
+				</div>
 
-		<span class="mar"> Mark all as read </span>
-	</header>
+				<span class="mar"> Mark all as read </span>
+			</header>
 
-	<main>
-		<div class="bubble unread">
-			<img :src="MarkWebber" class="left" />
-			<div class="body">
-				<b>Mark Webber</b> reacted to your recent post
-				<span>My first tournament today!</span>
-				<span class="dot"></span>
-				<small>1m ago</small>
-			</div>
-		</div>
+			<main>
+				<div class="bubble unread">
+					<img :src="MarkWebber" class="left" />
+					<div class="body">
+						<b>Mark Webber</b> reacted to your recent post
+						<span>My first tournament today!</span>
+						<span class="dot"></span>
+						<small>1m ago</small>
+					</div>
+				</div>
 
-		<div class="bubble unread">
-			<img :src="AngelaGray" class="left" />
-			<div class="body">
-				<b>Angela Gray</b> followed you
-				<span class="dot"></span>
-				<small>5m ago</small>
-			</div>
-		</div>
+				<div class="bubble unread">
+					<img :src="AngelaGray" class="left" />
+					<div class="body">
+						<b>Angela Gray</b> followed you
+						<span class="dot"></span>
+						<small>5m ago</small>
+					</div>
+				</div>
 
-		<div class="bubble unread">
-			<img :src="JacobThompson" class="left" />
-			<div class="body">
-				<b>Jacob Thompson</b> has joined your group
-				<span class="group">Chess Club</span>
-				<span class="dot"></span>
-				<small>1 day ago</small>
-			</div>
-		</div>
+				<div class="bubble unread">
+					<img :src="JacobThompson" class="left" />
+					<div class="body">
+						<b>Jacob Thompson</b> has joined your group
+						<span class="group">Chess Club</span>
+						<span class="dot"></span>
+						<small>1 day ago</small>
+					</div>
+				</div>
 
-		<div class="bubble">
-			<img :src="RizkyHasanuddin" class="left" />
-			<div class="body">
-				<b>Rizky Hasanuddin</b> sent you a private message
-				<small>5 days ago</small>
-				<p class="message">
-					Hello,
-					thanks for setting up the Chess Club. I've been a member for a few weeks now
-					and I'm already having lots of fun and improving my game.
-				</p>
-			</div>
-		</div>
+				<div class="bubble">
+					<img :src="RizkyHasanuddin" class="left" />
+					<div class="body">
+						<b>Rizky Hasanuddin</b> sent you a private message
+						<small>5 days ago</small>
+						<p class="message">
+							Hello,
+							thanks for setting up the Chess Club. I've been a member for a few weeks now
+							and I'm already having lots of fun and improving my game.
+						</p>
+					</div>
+				</div>
 
-		<div class="bubble">
-			<img :src="KimberlySmith" class="left" />
-			<div class="body">
-				<b>Kimberly Smith</b> commented on your picture
-				<small>1 week ago</small>
-			</div>
-			<img :src="Chess" class="right" />
-		</div>
+				<div class="bubble">
+					<img :src="KimberlySmith" class="left" />
+					<div class="body">
+						<b>Kimberly Smith</b> commented on your picture
+						<small>1 week ago</small>
+					</div>
+					<img :src="Chess" class="right" />
+				</div>
 
-		<div class="bubble">
-			<img :src="NathanPeterson" class="left" />
-			<div class="body">
-				<b>Nathan Peterson</b> reacted to your recent post
-				<span>5 end-game strategies to increase your win rate</span>
-				<small>2 weeks ago</small>
-			</div>
-		</div>
+				<div class="bubble">
+					<img :src="NathanPeterson" class="left" />
+					<div class="body">
+						<b>Nathan Peterson</b> reacted to your recent post
+						<span>5 end-game strategies to increase your win rate</span>
+						<small>2 weeks ago</small>
+					</div>
+				</div>
 
-		<div class="bubble">
-			<img :src="AnnaKim" class="left" />
-			<div class="body">
-				<b>Anna Kim</b> left the group
-				<span class="group">Chess Club</span>
-				<small>2 weeks ago</small>
-			</div>
+				<div class="bubble">
+					<img :src="AnnaKim" class="left" />
+					<div class="body">
+						<b>Anna Kim</b> left the group
+						<span class="group">Chess Club</span>
+						<small>2 weeks ago</small>
+					</div>
+				</div>
+			</main>
 		</div>
-		
-	</main>
+	</div>
+
 </template>
 
 <style scoped>
@@ -212,5 +216,57 @@ header {
 	font-size: 14px;
 	font-weight: 500;
 	color: #5E6778;
+}
+
+@media only screen and (min-width: 750px) {
+	.main {
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		background-color: #F7FAFD;
+	}
+
+	.container {
+		width: 730px !important;
+		height: fit-content;
+		margin-top: 63px;
+		border-radius: 15px;
+		background-color: #ffffff;
+		box-shadow: 0 20px 60px 0 rgba(73, 97, 168, .05);
+	}
+
+	header {
+		padding-top: 33px;
+		padding-left: 32px;
+		padding-right: 30px;
+	}
+
+	.header {
+		font-size: 24px;
+	}
+
+	.mar {
+		font-size: 16px;
+	}
+
+	.bubble .body {
+		font-size: 16px;
+	}
+
+	.bubble img {
+		width: 45px;
+		height: 45px;
+	}
+
+	.bubble {
+		margin-left: 30px;
+		margin-right: 30px;
+		margin-bottom: 8px;
+		padding-top: 18px;
+		padding-bottom: 18px;
+		padding-left: 20px;
+		padding-right: 32px;
+	}
 }
 </style>
